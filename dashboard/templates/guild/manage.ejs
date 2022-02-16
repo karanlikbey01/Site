@@ -1,0 +1,24 @@
+<%- include('../blocks/header', {bot, user, path}) %>
+<h2>Sunucuyu Yönet</h2>  
+<div class="row">
+  <div class="col col-4">
+    <%- include('../blocks/guild-card', {guild}) %>
+  </div>
+  <div class="col">
+    <form method="post">
+      
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="width: 75%; margin: 0 !important;">
+            <div class="input-group-addon" style="width: 150px; text-align: left; margin: 0;">Prefix</div>
+            <input type="text" class="form-control" style="text-align: left;" name="prefix" id="prefix" placeholder="Örnek : b!">
+        </div>
+        
+      </ul>
+      <div style="width: 100%; text-align: right; margin-top: 20px;">
+        <a class="btn btn-danger" data-toggle="modal" data-target="#settingsResetModal" role="button">Ayarları Sıfırla <i class="fa fa-fw fa-cogs" aria-hidden="true"></i></a>
+        <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet <i class="fa fa-fw fa-save" aria-hidden="true"></i></button>
+      </div>
+    </form>
+  </div>
+</div>
+<% include ../blocks/guild-modals %>
+<% include ../blocks/footer %>
